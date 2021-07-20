@@ -168,6 +168,7 @@ export function equal(c: unknown, d: unknown): boolean {
 export function assert(expr: unknown, msg = ""): asserts expr {
   if (!expr) {
     console.log('msg', msg);
+    throw new AssertionError(msg);
   }
 }
 
